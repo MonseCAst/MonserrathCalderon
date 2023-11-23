@@ -1,0 +1,60 @@
+
+
+@keyframes relleno {
+    0%   {fill:red; left:0px; top:0px;}
+  25%  {fill:yellow; left:50px; top:-50px;}
+  50%  {fill:blue; left:100px; top:0px;}
+  75%  {fill:green; left:150px; top:-50px;}
+  100% {fill:red; left:200px; top:0px;}
+  }
+  
+  @keyframes rotacion{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes size{
+    from{width: 30px;}
+    to{width: 300px;}
+  }
+
+body{
+    text-align: center;
+    margin-top: 0px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ciencia{
+    width: 150px;
+    fill: #FF4473;
+    stroke: black;
+    stroke-width: 1px;
+    animation-name: relleno;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+#franki{
+    fill: rgb(127, 255, 185);
+    stroke: black;
+    stroke-width: 1px;
+    width: 200px;
+    animation: rotacion 3s linear .5s infinite forwards;
+}
+
+#luna{
+    fill: rgb(107, 83, 227);
+    stroke: black;
+    stroke-width: 1px;
+    animation: size 3s linear .7s infinite forwards;
+}
